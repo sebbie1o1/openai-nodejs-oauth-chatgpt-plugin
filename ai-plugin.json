@@ -1,0 +1,25 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "TODO OAuth",
+  "name_for_model": "todo_oauth",
+  "description_for_human": "Plugin for managing a TODO list, you can add, remove and view your TODOs.",
+  "description_for_model": "Plugin for managing a TODO list, you can add, remove and view your TODOs.",
+  "auth": {
+      "type": "oauth",
+      "client_url": "PLUGIN_HOSTNAME/oauth",
+      "scope": "",
+      "authorization_url": "PLUGIN_HOSTNAME/auth/oauth_exchange",
+      "authorization_content_type": "application/json",
+      "verification_tokens": {
+          "openai": "Replace_this_string_with_the_verification_token_generated_in_the_ChatGPT_UI"
+      }
+  },
+  "api": {
+      "type": "openapi",
+      "url": "PLUGIN_HOSTNAME/openapi.yaml",
+      "is_user_authenticated": false
+  },
+  "logo_url": "PLUGIN_HOSTNAME/logo.png",
+  "contact_email": "contact@example.com",
+  "legal_info_url": "http://www.example.com/legal"
+}
