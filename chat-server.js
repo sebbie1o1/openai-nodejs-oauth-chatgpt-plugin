@@ -77,7 +77,7 @@ app.get('/oauth', (req, res) => {
     });
 
     console.log("OAuth key value pairs from the ChatGPT Request: ", kvps);
-    const url = `${kvps["redirect_uri"]}?code=${OPENAI_CODE}`;
+    const url = `${kvps["redirect_uri"]}?code=${OPENAI_CODE}&state=${kvps["state"]}`;
     console.log("URL: ", url);
     res.send(`<a href="${url}">Click to authorize</a>`);
 });
